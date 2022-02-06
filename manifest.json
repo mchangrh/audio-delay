@@ -1,0 +1,20 @@
+{
+  "name": "WebAudio Delay",
+  "description": "Add delay to audio with WebAudio API",
+  "action": {},
+  "version": "0.1",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["src/content.js"]
+    }
+  ],
+  "options_page": "src/options.html"
+}

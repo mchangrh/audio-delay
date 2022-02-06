@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  min-height: 98vh;
+  justify-content: center;
+  align-items: center;
+}
+.dark {
+  background: #111;
+  color: #ddd;
+  border: #ddd;
+  font-size: 4vmin;
+  font-family: monospace;
+}
+pre, input {
+  display: inline-block;
+}
+pre {
+  margin: 0;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type=number] {
+  width: 4ch
+}
