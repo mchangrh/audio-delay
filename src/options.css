@@ -1,4 +1,4 @@
-body {
+.hero {
   display: flex;
   min-height: 98vh;
   justify-content: center;

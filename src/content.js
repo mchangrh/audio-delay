@@ -30,14 +30,23 @@ const attach = () => {
 };
 
 const setDelay = (delay) => {
-  if (filter.delayTime.value !== delay) {
+  delay = delay/1000
+  if (filter.delayTime.value !== delay)
     filter.delayTime.value = delay;
-  }
 }
 
 window.addEventListener('load', () => {
   attach();
-  chrome.storage.sync.get("delay", (value) => {
+  chrome.storage.sync.get("delay", (value) =>
     setDelay(value.delay)
-  })
+  )
 });
+
+chrome.runtime.onMessage.addListener(
+  (request, sender, sendResponse) => {
+    if (request.delay) {
+      setDelay(request.delay);
+      sendResponse({ack: true});
+    }
+  }
+);

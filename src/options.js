@@ -15,7 +15,7 @@ slider.onchange = setStorage
 
 // set storage
 function setStorage() {
-  chrome.storage.sync.set({ delay: this.value/1000 })
+  chrome.storage.sync.set({ delay: this.value })
 }
 
 chrome.storage.sync.get("delay", (value) => {

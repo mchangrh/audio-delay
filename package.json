@@ -1,0 +1,27 @@
+{
+  "name": "audio-delay",
+  "version": "0.1",
+  "description": "Add delay to audio",
+  "main": "src/content.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mchangrh/audio-delay"
+  },
+  "author": "Michael Chang <michael@mchang.name>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mchangrh/audio-delay/issues"
+  },
+  "homepage": "https://github.com/mchangrh/audio-delay#readme",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0"
+  }
+}
