@@ -21,6 +21,7 @@ const attach = () => {
   for (const element of [...audioElem, ...videoElem]) {
     try {
       var mediaSource = context.createMediaElementSource(element)
+      context.resume();
       mediaSource.connect(filter);
       console.log("delay attached.");
     } catch (e) {
@@ -35,12 +36,12 @@ const setDelay = (delay) => {
     filter.delayTime.value = delay;
 }
 
-window.addEventListener('load', () => {
+window.onload = () => {
   attach();
   chrome.storage.sync.get("delay", (value) =>
     setDelay(value.delay)
   )
-});
+};
 
 chrome.runtime.onMessage.addListener(
   (request, sender, sendResponse) => {

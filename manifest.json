@@ -13,8 +13,8 @@
   },
   "content_scripts": [
     {
-      "run_at": "document_end",
-      "matches": ["://*/*"],
+      "run_at": "document_idle",
+      "matches": ["<all_urls>"],
       "js": ["src/content.js"]
     }
   ],

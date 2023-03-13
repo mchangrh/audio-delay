@@ -16,5 +16,5 @@ function setStorage() {
 }
 
 chrome.storage.sync.get("delay", (value) => {
-  text.value = value.delay
+  text.value = value?.delay
 })
